@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="span12 intro">
+    <h3>a way to anonymously send positive feedback. <span class="info"> <a href="#">More</a></p>.</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="span7">
+    <div class="note-holder well">
+      <% if current_user %>
+        <%= simple_form_for @message do |f| %>
+          <% if @message.errors.present? %>
+            <h3>Errors</h3>
+          <% end %>
+          <% @message.errors.full_messages.each do |msg| %>
+            <p class="error">
+              <%= msg %>
+            </p>
+          <% end %>
+          <%= f.input :recipient_email, label:"a note to:", %>
+            placeholder:'yourfriend@example.com'
+          <% end %>
+          <%= f.input :text, label:"Say something here", :input_html => {:rows => '5'} %>
+          <div class="message-remaining-chars"></div>
+          <%= f.button :submit, 'Send Note' %>
+          <div class="send-to-self">
+            <%= f.check_box :send_to_self %>
+            Send a copy to myself:
+          </div>
+        <% end %>
+      <% else %>
+        <form>
+          <% #%h5.loud %>
+            <% # %span Send a Mashnote now %>
+          <% end %>
+          <div class="control-group email optional">
+            <label>(class = 'email')
+              a note to:
+            </label>
+            <div class="controls">
+              <input>(type='email' size='50' placeholder='yourfriend@example.com' class='note-to input-block-level string email optional')         </input>
+            </div>
+          </div>
+          <div class="control-group text optional">
+            <div class="controls">
+              <textarea>( id='message_text' placeholder='Say something here' class='note-input input-block-level text optional' )</textarea>
+            </div>
+          </div>
+          <input>(type='submit' value='Send Note' class='note-send-btn btn btn-primary pull-right')         </input>
+          <div class="modal hide" id="sign-in-modal">
+            <div class="modal-header">
+              <button class="close">(data-dismiss='modal')
+                x
+              </button>
+              <h3>Please connect with Facebook or Twitter in order to send a note. We just want to make sure you're a real person.</h3>
+            </div>
+            <div class="modal-body">
+              <div id="auth-box">
+                <p>
+                  <%= link_to image_tag( 'fb_icon.png'), '/auth/facebook/' %>
+                </p>
+                <p>
+                  <%= link_to image_tag( 'twitter_icon.png'), '/auth/twitter/' %>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <% # %a{"data-dismiss" => 'modal', :href => '#'} Cancel %>
+            </div>
+          </div>
+          <script>
+            
+            $("input").focus(function () {
+              $('#sign-in-modal').modal('show');
+            });
+            $("textarea").focus(function () {
+              $('#sign-in-modal').modal('show');
+            });
+
+
+          </script>
+        </form>
+      <% end %>
+    </div>
+  </div>
+</div>
+

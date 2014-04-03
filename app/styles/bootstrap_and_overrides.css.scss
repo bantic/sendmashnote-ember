@@ -1,0 +1,569 @@
+/* -----------------------------------------------------------
+	STRUCTURE & LAYOUT
+*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 50px; /* bottom = footer height */
+}
+
+html,body {
+}
+.brand,  .nav, .navbar .brand {
+	padding:14px 0;
+}
+.container{
+ /*   min-height: 100%;
+    height: auto;
+    height: 100%;
+    margin: 0 auto -50px;*/
+    
+    padding: 20px;
+}
+
+.content{
+
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+#plane{
+	    background: url(paper_plane2.png) no-repeat right top;
+    background-size:60px auto;
+}
+.navbar-inner {
+	background-image: none; 
+	background-repeat: no-repeat; 
+	filter: none;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+	border: none;
+	box-shadow: none;
+	
+}
+
+header.navbar.navbar-fixed-top{
+	position: relative;
+}
+
+.navbar .brand {
+	text-shadow: none; 
+}
+
+.navbar-inner{
+	position: relative;
+}
+#logo{
+	margin: 0px auto 0 auto;
+	text-align: center;
+}
+
+#logo a.brand{
+	font-family: Archer-Book;
+	text-decoration: none;
+	font-size: 48px;
+	color: #DAB327;
+	padding: 5px;
+	background: url(cursor.png) right no-repeat;
+}
+#logo a.brand:hover{
+	background-color: #DAB327;
+	color: #FFF;
+
+}
+.navbar .nav > li > a {
+	padding: 8px 15px; 
+	text-shadow: none; 
+}
+.navbar .nav li:last-child a	{ 
+	border-right: none; 
+}
+.navbar .nav > li > a {
+    text-shadow:none;
+}
+.nav.pull-right{
+	width: 200px;
+	font-weight: 100;
+	font-family: Futura;
+}
+#social_nav{
+	float: left;
+	height: 50px;
+}
+
+#social_nav #social_links{
+	float: right;
+}
+
+#social_nav .fb, #social_nav .tw{
+
+}
+   
+.intro {
+	text-align:center;
+	padding:10px 0 18px 0;
+	margin-bottom:20px;
+	color: #343332;
+}
+.note-holder {
+	padding-bottom:50px;  
+}
+.note-holder h5 {
+	 text-align:center; 
+	 text-transform:uppercase; 
+	 margin-top:0; 
+}
+.note-holder h5:before {  
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position:relative; 
+    top:10px;
+    z-index: 1;
+}  
+.note-holder h5 span {  
+    padding: 0 20px;  
+    position: relative;  
+    z-index: 5;
+} 
+.note-input, #textarea#message_text {
+	min-height:300px;
+}
+
+#textarea#message_text, #textarea#message_text:focus, .note-input:focus{
+  border:none;
+}
+
+textarea#message_text.text.optional{
+	width: 500px;
+}
+
+
+.note-input, #textarea#message_text {
+  animation: blink-empty 1s infinite;
+  -webkit-animation: blink-empty 1s infinite;
+  border-left: transparent solid 1px;
+  margin:5px 
+}
+
+@keyframes blink-empty {
+  50% {border-left: 1px solid #333;}
+}
+
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+     
+    font-size:16px; 
+    padding: 24px 10px;
+}
+.note-send-btn, input.btn {
+    background-image: none;
+    margin:15px 0;
+    border-radius: 1px;
+	border: none;
+	padding: 15px 25px;
+	letter-spacing: 0.1em;
+	line-height: 20px;
+}
+
+.checkbox { border: 1px solid black; width: 10px; height: 10px; }
+
+footer {
+ /*   width: 80%;
+    margin: 15px auto 0px auto;
+    clear: both;
+    bottom: 0px;
+    padding-top: 15px; */
+	text-align:center; 
+    background: #F8F8F8;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0 40px 0;  
+}
+
+footer, .push {
+	height: 50px; /* .push must be the same height as .footer */
+}
+.social-links{
+	float: left;
+}
+
+.footer-links{
+	float: right;
+}
+
+#sign-in-modal .modal-body p {
+	padding:20px;
+	text-align:center;
+	
+}
+#sign-in-modal{
+	
+}
+.span12, .span7 {
+	margin-left: 0px;
+}
+.span7{
+	width: 60%;
+    clear: both;
+    margin: 20px auto;
+}
+.modal{
+    background: #FFF;
+    border-radius: 1px;
+}
+
+.modal-header{
+    background: #FFF;
+    border: none;
+    padding: 0px;
+}
+.modal-header h3{
+    font-family: FuturaBT-Light;
+    font-size: 14px;
+    margin: 30px;
+    text-transform: none;
+    line-height: 1.5em;
+}
+.modal-footer{
+    background: #FFF;
+    border: none;
+    box-shadow: none;
+}
+.modal-header .close{
+    margin: -45px -15px 0 0;
+    font-family: FuturaBT-Light;
+    font-size: 18px; 
+    border-radius: 50%;
+    background: #FF7765;
+    width: 30px;
+    height: 30px;
+    text-shadow: none;
+    color: #FFF;
+    opacity: 0.8;
+}
+.modal-body{
+    border: none;
+}
+.modal-body p{
+    width: 100px;
+    float: left;
+}
+.modal-body img{
+    width: 50px;
+    height: auto;
+}
+#auth-box{
+    margin: 0 auto;
+    width: 60%;
+}
+#footer-nav{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#footer-optout{
+
+    clear: both;
+}
+
+/* -----------------------------------------------------------
+	TYPOGRAPHY
+*/
+
+body	{ 
+	font-size: 15px;  
+	font-family: FuturaBT-Medium;
+}
+h1, h2, h3, h4, h5, h6, .note-send-btn {
+	line-height:1.3; 
+}
+p {
+	line-height: 1.6;
+}
+h2 {
+	font-size: 30px; 
+}
+h3 {
+	font-size: 12px; 
+	margin-bottom:.4em;
+	text-transform: uppercase;
+}
+.content ul li {
+	margin-bottom: .5em;
+}
+.navbar{
+	font-size: 12px; 
+	font-weight: 200;
+}
+.navbar .brand {
+	font-size: 20px;
+}
+ul.pitch {
+	margin:0;
+}
+ul.pitch li{ 
+	list-style:none; 
+	padding:20px 0; 
+	text-align:center; 
+}
+ul.pitch li:last-child {
+	border-bottom: none;
+}
+.navbar .nav > li > a:hover {
+    text-decoration:underline;
+}
+.intro h3 span {
+	font-size:32px; 
+}
+input.note-to{
+	border: none;
+	box-shadow: none;
+	border-radius: 1px;
+	font-family: FuturaBT-Light;
+    padding-left: 7px;
+}
+
+input[type="email"]{
+	border: none;
+	border: solid thin #F0F0F0;
+	color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Futura;
+    padding: 7px;
+    box-shadow: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+label.email{
+	text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.note-input, input.string.email.optional#message_recipient_email{
+	border: none;
+	box-shadow: none;
+    font-family: Futura;
+    -webkit-appearance: none;
+    resize: none;
+    padding: 15px 10px;
+}
+.note-input #message_text{
+	border-bottom: thin solid #333;
+
+}
+input.note-to, input.string.email.optional#message_recipient_email{
+    width: 60%;
+}
+.note-send-btn, input.btn{
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+p.info{
+	font-family: Futura;
+	font-weight: 200;
+	font-size: 14px;
+}
+
+
+h3 span.info{
+	font-family: Futura;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+#footer-optout{
+	padding-top: 30px;
+}
+
+.opt-out {
+	font-family: Futura;
+	font-size:10px;
+    color: #666;
+    font-weight: 100;
+}
+
+.social-links li, .social-links a{
+	height:20px;
+	display:block;
+	float: left;
+}
+
+.social-links li{
+	margin:0;padding:0;
+}
+
+#footer-nav ul{
+    text-align: center;
+}
+
+#footer-nav li{
+	list-style: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: inline; 
+}
+#footer-nav li a{
+    margin-left: 10px;
+}
+
+
+#footer-nav li.last a{
+    margin-right: 0px;    
+}
+
+.fb a{
+	width:20px;
+	background: url('socialogos.png') 0 0;
+	background-size: 40px 40px;
+	font-size: 0;
+	margin: 0;
+	display:block;
+	text-indent:-9999px;
+}
+
+.fb a:hover{
+	background: url('socialogos.png') -20px 0px;
+	background-size: 40px 40px;
+}
+
+.tw a{
+	width:20px;
+	height:18px;
+	background: url('socialogos.png') 0 -21px;
+	background-size: 40px 40px;
+	font-size: 0;
+	margin: 0;
+	display:block;
+	text-indent:-9999px;
+
+}
+
+.tw a:hover{
+	background: url('socialogos.png') -20px -21px;
+	background-size: 40px 40px;
+}
+
+ul{
+    -webkit-padding: 0px;
+    -webkit-margin: 0px;
+}
+.control-group.text.optional{
+    border: none;
+	font-family: Archer-Book;
+	font-size: 22px;
+}
+
+label.text.optional.control-label{
+	font-size: 18px;
+}
+
+textarea#message_text.text.optional{
+	font-family: Archer-Book;
+	font-size: 18px;
+}
+@font-face
+{
+	font-family: Archer-Book;
+	src: url(archer-book-webfont.ttf);
+}
+
+/* -----------------------------------------------------------
+	COLOR
+*/
+
+html, body {
+	color: #585652; 
+	background-color: #FFF;
+}
+a, a:hover, .loud {
+	color: #FF7765;
+}
+.note-send-btn, input.btn {
+	background-color: #FF7765;
+    text-shadow: none;
+
+}
+.note-send-btn, input.btn {
+	background-color: #FFF;
+    color: #FF7765;
+    border: medium solid #FF7765;
+    box-shadow: none;
+    float: right;
+}
+.note-send-btn:hover, input.btn:hover {
+    color: #FFFFFF;
+    background-color: #FF7765;
+    border: medium solid #FF7765;
+}
+.navbar-inner {
+	background-color: #FFF; 
+}
+.navbar .brand {
+	color: #fff; 
+}
+.navbar .nav > li > a {
+	border-right: 1px solid #21a496; 
+}
+.navbar .nav > li > a {
+    color: #ece5d9;
+}
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    color: #3c7a74;
+}
+.navbar .nav > li > a, .navbar .nav > li > a:focus, .navbar .nav > li > a:hover, .navbar .brand {
+    color: #333;
+}
+
+#footer-nav li a{ 
+    color: #333;
+}
+
+#footer-nav li a:hover, #footer-nav li a:focus{
+    color: #FF7765;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.alert-success {
+    background-color: #fff;
+    border-color: #d9d3c8;
+    color: #468847;
+}
+.note-holder, .note-holder h5 span  {
+
+}
+.note-holder h5:before 		{  
+    border-top: solid 1px #bbb;
+}  
+.note-holder {
+
+}
+.well{
+	border: none;
+	-webkit-box-shadow: none;
+	background: #FFF;
+}
+.note-holder h5 {
+	color:#666; 
+}
+footer p {
+	color:#999999; 
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #fff;
+}
+.intro, ul.pitch li {
+}
+.row{
+	margin: 0;
+}

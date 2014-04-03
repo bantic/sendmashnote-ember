@@ -1,3 +1,58 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-
-{{outlet}}
+<header class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+    <div class="container">
+      {{ partial 'layouts/navigation' }}
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <div id="logo">
+    <a href='/' class='brand'>mashnote</a>
+  </div>
+  <div class="content">
+    <div id="plane">
+      <div class="row">
+        <div class="span12">
+          {{outlet}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div id="footer-nav">
+    <ul>
+      <li>
+        {{link-to 'About' 'about'}}
+      </li>
+      <li>
+        {{link-to 'Contact' 'contact'}}
+      </li>
+      <li>
+        {{link-to 'Privacy' 'privacy'}}
+      </li>
+      <li>
+        {{link-to 'Terms of Service' 'tos'}}
+      </li>
+    </ul>
+    <div id="footer-optout">
+      <p>If you would like to stop receiving any future emails from mash note, you can <a href="#opt-out-modal" role="button" data-toggle="modal">opt out here</a>.</p>
+    </div>
+  </div>
+  <div class="modal hide" id="opt-out-modal">
+    <div class="modal-header">
+      <button class="close" data-dismiss='modal'>
+        x
+      </button>
+      <h3>Opt out</h3>
+    </div>
+    <div class="modal-body">
+      <p>
+        If you would like to opt out of receiving any future emails from mash note, enter your email below and submit.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a data-dismiss="modal" href="#">Cancel</a>
+    </div>
+  </div>
+</footer>

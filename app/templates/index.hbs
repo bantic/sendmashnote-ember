@@ -1,5 +1,39 @@
-<ul>
-{{#each}}
-  <li>{{this}}</li>
-{{/each}}
-</ul>
+<div class="row">
+  <div class="span12 intro">
+    <h3>a way to anonymously send positive feedback. <span class="info"> <a href="#">More</a></p>.</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="span7">
+    <div class="note-holder well">
+      {{input value=recipientEmail label="a note to:" placeholder='yourfriend@example.com'}}
+      {{input value=text placeholder='Say something here' rows="5"}}
+      <button {{action 'sendMessage'}}>Send Note</button>
+      <div class="send-to-self">
+        Send a copy to myself:
+        {{input type='checkbox' checked=sendToSelf}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal hide" id="sign-in-modal">
+  <div class="modal-header">
+    <button class="close" data-dismiss='modal'>
+      x
+    </button>
+    <h3>Please connect with Facebook or Twitter in order to send a note. We just want to make sure you're a real person.</h3>
+  </div>
+  <div class="modal-body">
+    <div id="auth-box">
+      <p>
+        <img src='assets/fb_icon.png' alt='login with facebook' />
+      </p>
+      <p>
+        <img src='assets/twitter_icon.png' alt='login with twitter' />
+      </p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href='#' data-dismiss='modal'>Cancel</a>
+  </div>
+</div>

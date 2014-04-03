@@ -1,0 +1,15 @@
+<ul class="nav pull-right">
+  {{#unless currentUser}}
+    <li>
+      <a role="button" {{action 'signIn'}}>Sign in</a>
+    </li>
+  {{else}}
+    <li>
+      <a>Signed in as {{currentUser.email}}</a>
+    </li>
+    <li>
+      <a href='#'>Sign out</a>
+    </li>
+  {{/unless}}
+</ul>
+
