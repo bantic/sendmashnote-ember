@@ -2,13 +2,11 @@
 
   <div id="emailbox">
     <span id="email">a note to: </span> 
-    <input id="emailinput" type="email" onblur="if (this.value=='')
-      this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''"
-      value="friend@email.com" name="nn">
+    {{input id='emailinput' type='email' value=email}}
   </div> <!-- closing emailbox -->
 
   <div id="notebox">
-    <textarea id="writenote" maxlength="500" placeholder="I hope this note brings with it a little light, a whiff of the ocean, a promise of warmth. It can't be easy to shed the funk from this endless winter but let's try. Let's think of the beach, sunshine, warm water that awaits you at the end of these crazy weeks at work. You deserve so much more and I am so sure it will come, so soon. Hang in there!"></textarea>
+    {{textarea value=message id="writenote" maxlength="500" placeholder="I hope this note brings with it a little light, a whiff of the ocean, a promise of warmth. It can't be easy to shed the funk from this endless winter but let's try. Let's think of the beach, sunshine, warm water that awaits you at the end of these crazy weeks at work. You deserve so much more and I am so sure it will come, so soon. Hang in there!"}}
     <p id="charcount"></p>
   </div> <!-- closing notebox -->
 
