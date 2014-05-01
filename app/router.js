@@ -5,7 +5,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('about');
-  this.route('about_us');
+  this.route('team');
+  this.route('privacy');
+  this.route('message', {path: '/message/:message_id'});
 });
 
 export default Router;

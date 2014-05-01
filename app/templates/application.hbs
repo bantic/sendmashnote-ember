@@ -2,7 +2,10 @@
   {{partial 'partials/header'}}
   {{partial 'partials/modal'}}
 
-  {{outlet}}
+  <div id="wrapper">
+    {{outlet}}
+  </div>
+  <div class="push"></div>
 </div>
 
 {{partial 'partials/footer'}}

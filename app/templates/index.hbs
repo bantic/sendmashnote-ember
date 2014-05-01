@@ -1,23 +1,33 @@
-<div id="wrapper">
-  <div id="note">
-    <div id="emailbox">
-      <span class="email">to: </span>
-      <input id="email" type="email" placeholder='friend@gmail.com' name="nn">
-    </div>
-    <div id="notebox">
-      <textarea id="writenote" rows="16" placeholder="Here's my note I am sending you, to bring a little sunshine to your day."></textarea>
-    </div>
-    <div id="sendarea">
-      <div id="checksend">
-        <div class="checkInput"><input type="checkbox" name="" value="1" id="checkInputOne"></div>
-        <label for="checkInputOne"></label>
-      </div>
-      <span id="checkCopy">Send a copy to myself</span>
-    </div>
-    <button id="sendnote">Send Note</button>
-  </div>
-</div>
+<div id="note">
 
-<div id="plane">
-  <a id ="planelink" href="#">Here's my plane over here.</a>
-</div>
+  <div id="emailbox">
+    <span id="email">a note to: </span> 
+    <input id="emailinput" type="email" onblur="if (this.value=='')
+      this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''"
+      value="friend@email.com" name="nn">
+  </div> <!-- closing emailbox -->
+
+  <div id="notebox">
+    <textarea id="writenote" maxlength="500" placeholder="I hope this note brings with it a little light, a whiff of the ocean, a promise of warmth. It can't be easy to shed the funk from this endless winter but let's try. Let's think of the beach, sunshine, warm water that awaits you at the end of these crazy weeks at work. You deserve so much more and I am so sure it will come, so soon. Hang in there!"></textarea>
+    <p id="charcount"></p>
+  </div> <!-- closing notebox -->
+
+  <div id="sendarea">
+
+    <div id="checksend">
+
+      <div class="checkInput">
+        <input type="checkbox" name="checkInput" value="1" id="checkInputOne">
+        <label for="checkInputOne"></label>
+      </div> <!-- closing checkInput -->
+
+      <span id="checkCopy">Send a copy to myself</span> 
+
+    </div> <!-- closing checksend -->
+
+    <button id="sendnote" {{action 'sendMessage'}}>Send Note</button>
+
+  </div> <!-- closing sendarea -->
+
+</div> <!-- closing note -->
+
