@@ -8,6 +8,7 @@ Router.map(function() {
   this.route('team');
   this.route('privacy');
   this.route('message', {path: '/message/:message_id'});
+  this.route('message_sent');
 });
 
 export default Router;

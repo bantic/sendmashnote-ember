@@ -8,11 +8,11 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-
+    ENV.api_host = 'http://localhost:3000/';
   }
 
   if (environment === 'production') {
-
+    ENV.api_host = 'http://localhost:3000/';
   }
 
   return JSON.stringify(ENV); // Set in index.html

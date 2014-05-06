@@ -1,17 +1,22 @@
 export default Ember.Controller.extend({
+  reset: function(){
+    this.setProperties({
+      text: null,
+      email: null
+    });
+  },
   actions: {
     sendMessage: function(){
-      var message = this.get('message');
-      var email   = this.get('email');
-      var id      = 'alkj23r';
+      var message = this.store.createRecord('message', {
+        text:  this.get('text'),
+        email: this.get('email'),
+        fbId: 'fakefbid'
+      });
 
-      var obj = {
-        message: message,
-        email: email,
-        id: id
-      };
-
-      this.transitionToRoute('message', obj);
+      var controller = this;
+      message.save().then(function(){
+        controller.transitionToRoute('message_sent');
+      });
     }
   }
 });
