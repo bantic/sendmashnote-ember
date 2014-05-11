@@ -1,5 +1,5 @@
 export default Ember.Route.extend({
-  setupController: function(controller, model){
+  setupController: function(controller){
     controller.reset();
   }
 });
