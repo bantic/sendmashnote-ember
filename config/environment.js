@@ -28,7 +28,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'http://localhost:3000';
+    ENV.apiHost = 'http://singleblind.herokuapp.com/';
   }
 
   return ENV;
