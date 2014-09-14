@@ -1,10 +1,17 @@
 <header>
 <!-- ////////////////////// LOGIN ////////////////////// -->
-    <div id="login">        
-      <!-- <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> -->
-          Hi Nidhi
-      <!-- </button> -->
+    {{#if session.signedIn}}
+    <div id="login">
+      Hi {{session.name}}
     </div>
+
+    {{else}}
+
+      <div id='login'>
+        <button {{action 'signIn'}}>Connect with Facebook</button>
+      </div>
+
+    {{/if}}
 <!-- ////////////////////// LOGIN ////////////////////// -->
 
 <!-- ////////////////////// SIGN IN MODAL ////////////////////// -->        
