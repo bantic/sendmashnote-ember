@@ -1,3 +1,7 @@
+/* global SendmashnoteENV */
+import DS from 'ember-data';
+
 export default DS.ActiveModelAdapter.extend({
-  host: ENV.apiHost
+  host: SendmashnoteENV.APP.apiHost,
+  namespace: 'api'
 });
