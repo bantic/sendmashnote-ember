@@ -15,7 +15,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      apiHost: 'http://localhost:3000'
+      apiHost: 'http://localhost:3000',
     }
   };
 
@@ -25,6 +25,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.APP.facebookApiKey = '245946445527611';
   }
 
   if (environment === 'test') {
@@ -33,6 +35,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.APP.apiHost = 'http://sendmashnote-api.herokuapp.com';
+    ENV.APP.facebookApiKey = '414455038617292';
   }
 
   return ENV;

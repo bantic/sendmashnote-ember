@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default Ember.Controller.extend({
   reset: function(){
     this.setProperties({
@@ -10,7 +12,7 @@ export default Ember.Controller.extend({
       var message = this.store.createRecord('message', {
         text:  this.get('text'),
         email: this.get('email'),
-        fbId: 'fakefbid'
+        fbId: this.get('session.fbId')
       });
 
       var controller = this;
