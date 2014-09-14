@@ -9,16 +9,18 @@
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/app.css">
-    <link rel="stylesheet" href="font-kit/futura.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/sendmashnote.css">
   </head>
   <body>
     <script>
-      window.ENV = {{ENV}};
+      window.SendmashnoteENV = {{ENV}};
+      window.EmberENV = window.SendmashnoteENV.EmberENV;
     </script>
-    <script src="assets/app.js"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/sendmashnote.js"></script>
     <script>
-      window.Sendmashnote = require('sendmashnote/app')['default'].create(ENV.APP);
+      window.Sendmashnote = require('sendmashnote/app')['default'].create(SendmashnoteENV.APP);
     </script>
   </body>
 </html>
