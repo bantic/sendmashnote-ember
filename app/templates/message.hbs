@@ -15,6 +15,13 @@
 </div> <!-- closing got note -->
 
 <div id="noteshare">
+  {{#link-to 'report_message' this.id}}
+    Report this message.
+  {{/link-to}}
+  {{#link-to 'opt_out'}}
+    Opt out
+  {{/link-to}}
+
   <button class="thanksender">Thank Sender</button>
   <button class="thanksender">Share on <img class ="fb" src="images/fb_icon.png"</></button>
   <button class="thanksender">Tweet on <img class ="fb" src="images/tw_icon.png"</></button>

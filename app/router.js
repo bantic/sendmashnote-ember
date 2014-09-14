@@ -11,6 +11,8 @@ Router.map(function() {
   this.route('message_sent');
 
   this.route('message', {path: 'messages/:message_id'});
+  this.route('report_message', {path:'messages/:message_id/report'});
+  this.route('opt_out');
 });
 
 export default Router;

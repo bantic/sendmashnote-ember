@@ -1,0 +1,7 @@
+{{#if optedOut}}
+  Thanks, we will not send any more emails to {{email}}
+{{else}}
+  {{input value=email placeholder="Enter your email"}}
+
+  <button {{action 'optOut'}}>Don't send me any more emails.</button>
+{{/if}}
