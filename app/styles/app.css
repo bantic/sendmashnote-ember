@@ -130,7 +130,7 @@ header{
 	height: 5px;
 	background: transparent;
 	top: 6px;
-	left: 7px;
+	left: 5px;
 	border: 3px solid #333;
 	border-top: none;
 	border-right: none;
@@ -147,6 +147,10 @@ header{
 
 .checkInput input[type=checkbox]:checked + label:after {
 	opacity: 1;
+}
+
+input#checkInputOne{
+	display: none;
 }
 
 #checkCopy{
@@ -551,11 +555,19 @@ a.email{
 	background-size: 80px 80px;
 }
 
-
-
 #about li.tw a:hover{
 	background: url('/images/socialogos2.png') -40px -40px;
 	background-size: 80px 80px;
+}
+
+ul#tos{
+	padding: 0;
+}
+
+ul#tos li{
+	float: none;
+	list-style: none;
+	padding-left: 0;
 }
 
 h3#emailnote{
