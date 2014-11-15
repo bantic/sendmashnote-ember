@@ -56,7 +56,7 @@ header{
 		text-align: center;
 		font-family: FuturaBT-Medium;
 		font-size: 0.85em;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.3em;
 		text-transform: uppercase;
 }
 
@@ -99,7 +99,7 @@ header{
 	text-transform: uppercase;
 	font-size: 0.85em;
 	color: #666;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 }
 
 .checkInput{
@@ -166,7 +166,7 @@ button#sendnote, button.thanksender, button.viewmashnote{
 	text-transform: uppercase;
   text-shadow: none;
   padding: 18px 34px;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	font-size: 12px;
 	line-height: normal;
 	background-color: #FFF;
@@ -210,7 +210,7 @@ button.noteshare{
 	text-transform: uppercase;
   text-shadow: none;  
   padding: 0 34px;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	font-size: inherit;
 	line-height: normal;
 	background-color: #FFF;
@@ -341,7 +341,8 @@ footer#emailfooter{
 	color: #666;
 	font-style: italic;
 }
-/* TYPE etc */
+
+/* ////////////////////// TYPE etc ////////////////////// */
 
 input#emailinput, span#emailinput{
 	margin: 0;
@@ -441,11 +442,15 @@ h2:after{
 
 }
 
+#about h2{
+	margin: 30px 0 10px 0;
+}
+
 #login{
 	font-family: FuturaBT-Medium;
 	text-transform: uppercase;
 	font-size: 0.9em;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 }
 
 #login a{
@@ -502,6 +507,15 @@ h2:after{
 
 }
 
+#dynamicPrompt{
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-style: italic;
+	text-align: right;
+	font-weight: 100;
+	font-size: 1.5em;
+	color: #666;
+}
+
 a#brand{
 		color: #DAB327;
 		text-decoration: none;
@@ -514,20 +528,20 @@ a.email{
 	text-transform: uppercase;
 	color: #FF7765;
 	font-size: 0.8em;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	text-align: center;
 	display: block;
 	font-style: normal;
 }
 
 #about a.aboutus{
-	color: #DAB327;
+	color: #FF7765;
 	text-decoration: none;
 	font-style: italic;
 }
 
 #about a.aboutus:hover{
-	color: #FF7765;
+	color: #DAB327;
 }
 
 #about li{
@@ -603,7 +617,7 @@ h3#thankyou{
 	display: inline;
 	font-size: 0.85em;
 	color: #666;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 }
 
 img.fb{
@@ -683,7 +697,7 @@ button.btn{
 	font-family: FuturaBT-Medium;
 	text-transform: uppercase;
 	font-size: 0.9em;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	text-decoration: none;
 	color: #333;
 	text-shadow: none;
@@ -716,7 +730,7 @@ button.btn:focus{
 	box-shadow: none;
 	font-size: 1em;
 	color: #666;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	text-align: center;
 	width: 100%;
 	left: 0;
